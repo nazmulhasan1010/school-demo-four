@@ -1,12 +1,24 @@
 <header>
-    {{--    @php--}}
-    {{--    @dd($data['abouts'])--}}
-    {{--    @endphp--}}
+    <div class="container header-container">
+        <div class="header-section d-flex">
+            <div class="school-logo">
+                <img src="{{$assetServer.$data['setting']->logo}}" alt="School Logo"/>
+            </div>
+            <div class="school-name">
+                <h2>International demo school,Dhaka</h2>
+                <h4>Mirpur-10, C block, Road-10, Dhaka, Bangladesh</h4>
+                <h6>EIIN:1120</h6>
+            </div>
+            <div class="attachment">
+                <img src="{{asset('assets/image/men.jpg')}}" alt="School Logo"/>
+            </div>
+        </div>
+    </div>
     <div class="container nav-menu ">
         <div class="row navigation ">
             <div class="col-md-6 res-logo ">
                 <a href="{{route('/')}}">
-                    <img src="{{appSetting('asset')->asset.$data['setting']->logo}}" class="responsive-logo img-fluid"
+                    <img src="{{$assetServer.$data['setting']->logo}}" class="responsive-logo img-fluid"
                          alt="responsive-logo"/>
                 </a>
             </div>
@@ -16,7 +28,7 @@
                             data-target="#navbarNavDropdown">
                         <i style="color: #fff" class="fa-solid fa-bars"></i>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <div class="collapse navbar-collapse " id="navbarNavDropdown">
                         <ul class="navbar-nav ">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('/')}}">{{__('front.home')}}</a>
@@ -38,11 +50,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="academics.html">{{__('front.academics')}}</a>
                             </li>
-                            <li class="nav-logo">
-                                <a href="#" class="navbar-brand">
-                                    <img src="{{appSetting('asset')->asset.$data['setting']->logo}}" class="img-fluid" alt="logo"/>
-                                </a>
-                            </li>
+                            {{--                            <li class="nav-logo">--}}
+                            {{--                                <a href="#" class="navbar-brand">--}}
+                            {{--                                    <img src="{{$assetServer.$data['setting']->logo}}" class="img-fluid" alt="logo"/>--}}
+                            {{--                                </a>--}}
+                            {{--                            </li>--}}
                             <li class="nav-item">
                                 <a class="nav-link" href="research.html">{{__('front.notice')}}</a>
                             </li>
@@ -96,12 +108,20 @@
                             </li>
                             <li class="nav-item">
                                 @if (!auth()->check())
-                                    <a class="nav-link" href="{{appSetting('asset')->asset.'login'}}">{{__('front.login')}}</a>
+                                    <a class="nav-link" href="{{$assetServer.'login'}}">{{__('front.login')}}</a>
                                 @else
-                                    <a class="nav-link" href="{{appSetting('asset')->asset.'admin-dashboard'}}">{{__('front.dashboard')}}</a>
+                                    <a class="nav-link"
+                                       href="{{$assetServer.'admin-dashboard'}}">{{__('front.dashboard')}}</a>
                                 @endif
                             </li>
                         </ul>
+                        <div class="language-box">
+                            <div class="language-button-box">
+                                <a href="{{route('language-change','bn')}}"
+                                   class="language-button {{Session::get('language')==='bn'?'active':''}}">Bangla</a>
+                                <a href="{{route('language-change','en')}}" class="language-button {{Session::get('language')==='en'?'active':''}}">English</a>
+                            </div>
+                        </div>
                     </div>
                 </nav>
             </div>

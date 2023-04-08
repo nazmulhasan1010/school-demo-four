@@ -14,6 +14,8 @@ use App\Models\HomePageSetting;
 use App\Models\News;
 use App\Models\NoticeBoard;
 use App\Models\Section;
+use App\Models\Slider;
+use App\Models\Staff;
 use App\Models\Subject;
 use App\Models\Testimonial;
 use Brian2694\Toastr\Facades\Toastr;
@@ -45,14 +47,16 @@ class frontEndController extends Controller
             'academics' => Course::where('school_id', $schoolId)->orderBy('id', 'asc')->limit(3)->get(),
             'exam_types' => ExamType::where('school_id', $schoolId)->get(),
             'events' => Event::where('school_id', $schoolId)->get(),
-            'notice_board' => NoticeBoard::where('school_id', $schoolId)->where('is_published', 1)->orderBy('created_at', 'DESC')->take(3)->get(),
+            'notice_board' => NoticeBoard::where('school_id', $schoolId)->where('is_published', 1)->orderBy('created_at', 'DESC')->take(4)->get(),
             'classes' => ClassModel::where('school_id', $schoolId)->where('active_status', 1)->get(),
             'subjects' => Subject::where('school_id', $schoolId)->where('active_status', 1)->get(),
             'section' => Section::where('school_id', $schoolId)->where('active_status', 1)->get(),
             'homePage' => HomePageSetting::where('school_id', $schoolId)->first(),
             'abouts' => AboutPage::where('school_id', $schoolId)->get(),
+            'slider' => Slider::where('row_status', '=', true)->get(),
+            'staff'=> Staff::where('school_id', $schoolId)->take(4)->get(),
         ];
         $data = array_merge($settingArray, $home_data);
-        return view('pages.home',compact('data'));
+        return view('pages.home', compact('data'));
     }
 }

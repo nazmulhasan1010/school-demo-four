@@ -3,4 +3,11 @@
 @section('content')
     @include('pages.components.slider')
     @include('pages.components.welcome')
+    @include('pages.components.teachers')
+    @include('pages.components.about')
+    @include('pages.components.feature')
+    @include('pages.components.event')
+    @include('pages.components.details-box')
+    @include('pages.components.news&blog')
+    @include('pages.components.gallery')
 @endsection

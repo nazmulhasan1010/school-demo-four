@@ -7,4 +7,11 @@ return [
     'academics' => 'Academics',
     'notice' => 'Notice',
     'contact' => 'Contact',
+    'our' => 'Our',
+    'teacher' => 'Teachers',
+    'notice-board' => 'Notice Board',
+    'see' => 'See',
+    'all' => 'All',
+    'more' => 'More',
+    'welcome' => 'Welcome',
 ];

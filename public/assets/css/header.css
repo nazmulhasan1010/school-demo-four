@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;500;600;700&display=swap');
+
+.header-container {
+    width: 100%;
+
+}
+
+.header-container .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.header-container .header-section .school-logo {
+    width: 25%;
+}
+
+.header-container .header-section .school-logo img {
+    height: 100px;
+}
+
+.header-container .header-section .school-name {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container .header-section .school-name h2 {
+    background: linear-gradient(to top left, #E90064, #210062);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+    font-family: 'Dosis', sans-serif;
+    /*color: #292d3e;*/
+}
+.text-gradient{
+    background: linear-gradient(to top left, #E90064, #210062);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-family: 'Signika Negative', sans-serif;
+}
+.text-font{
+    font-family: 'Signika Negative', sans-serif;
+}
+.header-container .header-section .attachment {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-container .header-section .attachment img {
+    height: 100px;
+}
+
+@media (max-width: 993px) {
+    .header-container .header-section .school-logo {
+        display: none;
+    }
+
+    .header-container .header-section .school-name {
+        width: 80%;
+        align-items: flex-start;
+    }
+
+    .header-container .header-section .attachment {
+        width: 20%;
+    }
+
+    .header-container .header-section .attachment img {
+        height: 70%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-container .header-section .school-name h2 {
+        font-size: 1.2rem;
+    }
+
+    .header-container .header-section .school-name h4 {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .header-container .header-section .school-name {
+        width: 85%;
+        align-items: flex-start;
+    }
+
+    .header-container .header-section .attachment {
+        width: 15%;
+        background-color: red;
+    }
+}
+
+@media (max-width: 430px) {
+    .header-container .header-section .school-name h2 {
+        font-size: 1rem;
+    }
+
+    .header-container .header-section .school-name h4 {
+        font-size: .6rem;
+    }
+
+    .header-container .header-section .school-name h6 {
+        font-size: .7rem;
+    }
+}
+
+/*slider*/
+.gradient-container {
+    background-image: linear-gradient(to top left, #E90064, #210062);
+}
+
+.gradient-container .heading-text {
+    color: #fff;
+}
+
+.notice-and-slider {
+    background-image: linear-gradient(to top left, #E90064, #210062);
+    /*background-color: #e3e3e3;*/
+}
+
+.notice-section {
+    width: 100%;
+    padding: 20px 0 20px 20px;
+}
+
+.notice-section .notice-board {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top left, rgba(232, 160, 191, 0.40), rgba(186, 144, 198, 0.40));
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(5px);
+    /*border: 1px solid rgba(255, 255, 255, 0.3);*/
+    border: 1px solid #009FBD;
+}
+
+.notice-section .notice-board .notice-board-header {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #009FBD;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notice-section .notice-board .notices {
+    display: flex;
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+.notice-section .notice-board .notice-board-header a {
+    background-image: linear-gradient(to top left, #E90064, #210062);
+    padding: 3px 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.56);
+}
+.notice-section .notice-board .notice-board-header a:hover{
+    color: #fff;
+}
+
+.notice-section .notice-board .notices:hover {
+    transform: scale(1.03);
+}
+
+.notice-section .notice-board .notices .date-box {
+    text-align: center;
+    width: 80px;
+}
+
+.notice-section .notice-board .notices .date-box h3 {
+    margin: 0;
+    padding: 8px;
+    border-radius: 7px 0 0 0;
+    color: #fff;
+    font-size: 25px;
+    background-color: #009FBD;
+}
+
+.notice-section .notice-board .notices .date-box h6 {
+    border: 1px solid #009FBD;
+    border-top: none;
+    font-size: 14px;
+    padding: 10px 5px;
+    border-radius: 0 0 0 7px;
+    background-color: rgba(255, 255, 255, 0.51);
+}
+
+.notice-section .notice-board .notices .text-box {
+    width: 85%;
+    color: #fff;
+    border: 1px solid #009FBD;
+    border-left: none;
+    padding: 5px 10px;
+    border-radius: 0 7px 7px 0;
+    background-color: #576CBC;
+}
+
+.notice-section .notice-board .notices .text-box p {
+    margin: 0;
+}
+
+.notice-section .notice-board .notices .text-box .title {
+    font-size: 14px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.notice-section .notice-board .notices .text-box .description {
+    font-size: 12px;
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.slider-section {
+    padding: 20px;
+}
+
+.banner-slider .slider_img {
+    border-radius: 10px;
+}
+
+.carousel-item img {
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .notice-section {
+        padding: 20px;
+    }
+
+    .banner-section {
+        flex-direction: column-reverse;
+    }
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}

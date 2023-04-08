@@ -23,6 +23,43 @@
     margin: 0 !important;
 }
 
+.navigation-modal .navbar .navbar-collapse {
+    justify-content: space-between;
+}
+
+.navigation-modal .navbar .navbar-collapse .language-box, .language-button-box {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-modal .navbar .navbar-collapse .language-box .language-button-box .language-button {
+    width: 80px;
+    padding: 5px 0;
+    text-align: center;
+    border: 1px solid #fff;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+.navigation-modal .navbar .navbar-collapse .language-box .language-button-box .language-button.active {
+    background-color: #009FBD;
+}
+
+.navigation-modal .navbar .navbar-collapse .language-box .language-button-box .language-button:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.navigation-modal .navbar .navbar-collapse .language-box .language-button-box .language-button:nth-child(1) {
+    border-radius: 5px 0 0 5px;
+}
+
+.navigation-modal .navbar .navbar-collapse .language-box .language-button-box .language-button:nth-child(2) {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+}
+
 .navigation-modal .navbar .navbar-collapse ul li a {
     font-size: 12px;
 }
@@ -230,6 +267,12 @@
 @media (max-width: 991px) {
     .navbar-nav > li {
         margin: 0 10px;
+    }
+
+    .language-box {
+        padding: 10px 0 40px 0;
+        background-color: #292d3e;
+        justify-content: center;
     }
 
     .responsive-logo {
@@ -952,7 +995,7 @@ a:hover {
 }
 
 .detailed_chart {
-    background: url(../images/chart_bg.jpg) no-repeat;
+    background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     padding: 97px 0;
@@ -1992,6 +2035,9 @@ footer h3 {
 
 .admission_cources {
     padding: 70px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .admission_cources h2 {
