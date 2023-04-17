@@ -54,9 +54,57 @@ class frontEndController extends Controller
             'homePage' => HomePageSetting::where('school_id', $schoolId)->first(),
             'abouts' => AboutPage::where('school_id', $schoolId)->get(),
             'slider' => Slider::where('row_status', '=', true)->get(),
-            'staff'=> Staff::where('school_id', $schoolId)->take(4)->get(),
+            'staff' => Staff::where('school_id', $schoolId)->with('department')->take(4)->get(),
         ];
         $data = array_merge($settingArray, $home_data);
         return view('pages.home', compact('data'));
+    }
+
+    /**
+     * @param $id
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function aboutSection($id)
+    {
+        $content = AboutPage::find($id);
+        return \view('pages.about_section', compact('content'));
+    }
+
+    /**
+     * @param $id
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function testimonial($id)
+    {
+        $content = Testimonial::find($id);
+        return \view('pages.administration', compact('content'));
+    }
+
+    /**
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function teacher()
+    {
+        $teachers = Staff::where('school_id', appSetting('school')->id)->with('department')->get();
+        return \view('pages.teachers.teachers', compact('teachers'));
+    }
+
+    /**
+     * @param $id
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function teacherInformation($id)
+    {
+        $teacher = Staff::find($id);
+        return \view('pages.teachers.teacherInfo', compact('teacher'));
+    }
+
+    /**
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function noticeBoard()
+    {
+        $notices = NoticeBoard::get();
+        return \view('pages.notices.notice_board', compact('notices'));
     }
 }

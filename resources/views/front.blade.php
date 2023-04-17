@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
+    @php
+        $appData = appSetting('appData');
+        $assetServer = appSetting('asset')->asset;
+    @endphp
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>{{ Config::get('app.name') }} || @yield('title')</title>
-    <link rel="shortcut icon" href="{{appSetting('asset')->asset.$data['setting']->favicon}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{appSetting('asset')->asset.$appData['app']->favicon}}" type="image/x-icon">
     {{--  bootstrap css  --}}
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}"/>
 
@@ -44,9 +48,6 @@
     @stack('pageCss')
 </head>
 <body>
-@php
-    $assetServer = appSetting('asset')->asset;
-@endphp
 
 {{-- header --}}
 @include('partials.header')

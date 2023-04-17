@@ -4,7 +4,7 @@
             <div class="col-md-3">
                 <div class="foot-logo">
                     <a href="index.html">
-                        <img src="{{$assetServer.$data['setting']->logo}}" class="img-fluid" alt="footer_logo"/>
+                        <img src="{{$assetServer.$appData['app']->logo}}" class="img-fluid" alt="footer_logo"/>
                     </a>
                     <p>
                         2016 © copyright <br/>

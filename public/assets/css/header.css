@@ -44,6 +44,11 @@
     font-size: 2rem;
     font-family: 'Signika Negative', sans-serif;
 }
+.text-gradient-no-font{
+    background: linear-gradient(to top left, #E90064, #210062);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .text-font{
     font-family: 'Signika Negative', sans-serif;
 }
@@ -123,8 +128,8 @@
 }
 
 .notice-and-slider {
-    background-image: linear-gradient(to top left, #E90064, #210062);
-    /*background-color: #e3e3e3;*/
+    /*background-image: linear-gradient(to top left, #E90064, #210062);*/
+    background-color: #e3e3e3;
 }
 
 .notice-section {

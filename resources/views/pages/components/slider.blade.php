@@ -1,7 +1,7 @@
 @php
     $assetServer = appSetting('asset')->asset;
 @endphp
-<div class="container-fluid notice-and-slider" style="background-image:linear-gradient(to bottom,rgba(233,0,100,0.70), rgba(33,0,98,0.70)),url({{asset('assets/image/gradient-g-3.jpg')}})">
+<div class="container-fluid notice-and-slider" >
     <div class="row banner-section">
         <div class="col-md-4 notice-section">
             <div class="notice-board">
@@ -41,23 +41,7 @@
                         <div class="carousel-inner" role="listbox">
                             @foreach($data['slider'] as $key=>$slider)
                                 <div class="carousel-item {{$key==0?'active':''}}">
-                                    <img class="d-block" src="{{$assetServer.$slider->image}}" alt="First slide"/>
-                                    <div class="carousel-caption d-md-block">
-                                        <div class="slider_title">
-                                            <h1>{{$slider->title}}</h1>
-                                            {{--                                <h4>--}}
-                                            {{--                                    Proactively utilize open-source users--}}
-                                            {{--                                    for process-centric total linkage.<br/>--}}
-                                            {{--                                    Energistically reinvent web-enabled--}}
-                                            {{--                                    initiatives with premium--}}
-                                            {{--                                    <br/>processes. Proactively drive.--}}
-                                            {{--                                </h4>--}}
-                                            {{--                                <div class="slider-btn">--}}
-                                            {{--                                    <a href="#" class="btn btn-default">SEE Programs</a>--}}
-                                            {{--                                    <a href="#" class="btn btn-default">Learn more</a>--}}
-                                            {{--                                </div>--}}
-                                        </div>
-                                    </div>
+                                    <img class="d-block" style="height: 500px" src="{{$assetServer.$slider->image}}" alt="First slide"/>
                                 </div>
                             @endforeach
                         </div>

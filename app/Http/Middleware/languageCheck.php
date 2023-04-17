@@ -22,6 +22,9 @@ class languageCheck
         if (Session::has('language')){
             $language = Session::get('language');
             App::setLocale($language);
+        }else{
+            Session::put('language', 'en' );
+            App::setLocale('en');
         }
         return $next($request);
     }

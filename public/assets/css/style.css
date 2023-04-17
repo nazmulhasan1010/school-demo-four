@@ -2844,7 +2844,7 @@ select.form-control.custom-select {
 }
 
 .blog-tiltle_block {
-    padding: 30px 0 0 100px;
+    padding: 30px 0 0 35px;
 }
 
 .blog-tiltle_block h4 {
@@ -2931,7 +2931,7 @@ select.form-control.custom-select {
 }
 
 .blog-category_block {
-    padding: 50px 0;
+    padding: 0 0;
 }
 
 .blog-category_block h3 {

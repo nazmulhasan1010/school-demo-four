@@ -16,7 +16,6 @@
 					type specimen book. It has survived not only five
 					centuries
 				</p>
-				<img src="{{asset('public/frontend/img/')}}/welcom_sign.png" class="img-fluid" alt="welcom-img"/>
 			</div>
 		</div>
 	</div>
