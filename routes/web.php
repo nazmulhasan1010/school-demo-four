@@ -12,5 +12,8 @@ Route::group(['middleware' => 'language'], function () {
     Route::get('teacher-information/{id}', [frontEndController::class, 'teacherInformation'])->name('teacher-information');
     Route::get('teacher', [frontEndController::class, 'teacher'])->name('teacher');
     Route::get('notice-board', [frontEndController::class, 'noticeBoard'])->name('notice-board');
+    Route::get('notice/{id}', [frontEndController::class, 'notice'])->name('notice');
+    Route::get('image-gallery', [frontEndController::class, 'imageGallery'])->name('image-gallery');
+    Route::get('video-gallery', [frontEndController::class, 'videoGallery'])->name('video-gallery');
 });
 

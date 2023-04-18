@@ -57,16 +57,29 @@
                                 <ul class="dropdown-menu">
                                     @foreach($appData['testimonial'] as $testimonial)
                                         <li>
-                                            <a class="dropdown-item" href="{{route('testimonial',$testimonial->id)}}">Message of {{$testimonial->designation}}</a>
+                                            <a class="dropdown-item" href="{{route('testimonial',$testimonial->id)}}">Message
+                                                of {{$testimonial->designation}}</a>
                                         </li>
                                     @endforeach
-                                        <li>
-                                            <a class="dropdown-item" href="{{route('teacher')}}">{{__('front.teacher')}}</a>
-                                        </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{route('teacher')}}">{{__('front.teacher')}}</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('notice-board')}}">{{__('front.notice')}}</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">{{__('front.gallery')}}</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="{{route('image-gallery')}}">{{__('front.image')}} {{__('front.gallery')}}</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{route('video-gallery')}}">{{__('front.video')}} {{__('front.gallery')}}</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">{{__('front.contact')}}</a>

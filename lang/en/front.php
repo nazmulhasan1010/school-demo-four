@@ -24,4 +24,8 @@ return [
     'profile' => 'Profile',
     'designation' => 'Designation',
     'department' => 'Department',
+    'gallery' => 'Gallery',
+    'video' => 'Video',
+    'photo' => 'Photo',
+    'image' => 'Image',
 ];

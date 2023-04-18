@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12">
                     @foreach($notices as $notice)
-                        <a href="">
+                        <a href="{{route('notice',$notice->id)}}">
                             <div class="event_date">
                                 <div class="event-date-wrap">
                                     <p>{{date('d', strtotime($notice->notice_date))}}</p>

@@ -7,7 +7,7 @@
             <div class="notice-board">
                 <div class="notice-board-header">
                     <h3 class="text-font">{{__('front.notice-board')}}</h3>
-                    <a href="">{{__('front.see')}} {{__('front.all')}}</a>
+                    <a href="{{route('notice-board')}}">{{__('front.see')}} {{__('front.all')}}</a>
                 </div>
                 @foreach($data['notice_board'] as $notice)
                     @php
@@ -15,7 +15,7 @@
                         $month = date('M', strtotime($notice->notice_date ));
                         $year = date('y', strtotime($notice->notice_date ))
                     @endphp
-                    <div class="notices">
+                    <a href="{{route('notice',$notice->id)}}" class="notices">
                         <div class="date-box">
                             <h3 class="m-0">{{$date}}</h3>
                             <h6 class="m-0">{{$month .' '. $year}} </h6>
@@ -24,7 +24,7 @@
                             <p class="title">{{$notice->notice_title}}</p>
                             <p class="description">{{$notice->notice_message}}</p>
                         </div>
-                    </div>
+                    </a>
                 @endforeach
             </div>
         </div>
